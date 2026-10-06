@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router"
-// import Home from "./Home";
+import TextForm from "./TextForm";
 import About from "./About";
 import Navbar from "./Navbar";
 
@@ -12,7 +12,7 @@ function App() {
       {/* <About />  */}
 
       <Routes>
-        {/* <Route path="/" element={<Navbar title="jasmine" About="About" />} /> */}
+        <Route path="/" element={<TextForm />}></Route>
         <Route path="/about" element={<About />}></Route>
       </Routes>
     </>
