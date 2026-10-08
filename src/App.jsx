@@ -33,8 +33,14 @@ function App() {
       msg: message,
       type: type
     })
-
+    setInterval(() => {
+      setAlertMsg(null);
+    }, 3000)
   }
+
+
+
+
 
   return (
     <>
@@ -45,7 +51,7 @@ function App() {
         <Route path="/" element={<TextForm ShowAlert={ShowAlert} heading="Hyyy" Mode={Mode} AlertMsg={AlertMsg} />}></Route>
         <Route path="/about" element={<About />}></Route>
         {/* <Route path="/" element={<Alert AlertMsg={AlertMsg} />}></Route> */}
-      </Routes >
+      </Routes>
     </>
   )
 }
