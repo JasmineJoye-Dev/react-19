@@ -7,18 +7,20 @@ import { useState } from "react";
 
 function App() {
   const [Mode, setMode] = useState("light")
-  const ToggleMode = () => {
+  const removeColor=()=>{
+ document.body.classList.remove("bg-primary")
+  document.body.classList.remove("bg-secondary")
+   document.body.classList.remove("bg-danger")
+  
+  }
+  const ToggleMode = (clr) => {
+     removeColor()
+    document.body.classList.add('bg-'+clr)
     if (Mode === "light") {
       setMode("dark");
       document.body.style.backgroundColor = "#1b3348";
       ShowAlert("dark mode enabled", "success");
       document.title = "TextUtils : dark Mode"
-      setInterval(() => {
-        document.title = "heyy - whatsupp";
-      }, 1000);
-      setInterval(() => {
-        document.title = "Install it";
-      }, 5000);
     }
     else {
       setMode("light");
@@ -49,7 +51,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<TextForm ShowAlert={ShowAlert} heading="Hyyy" Mode={Mode} AlertMsg={AlertMsg} />}></Route>
-        <Route path="/about" element={<About />}></Route>
+        <Route path="/about" element={<About Mode={Mode} />}></Route>
         {/* <Route path="/" element={<Alert AlertMsg={AlertMsg} />}></Route> */}
       </Routes>
     </>

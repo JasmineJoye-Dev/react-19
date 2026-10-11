@@ -23,11 +23,11 @@ export default function TextForm(props) {
             <div className="container" style={{ color: props.Mode === "dark" ? "white" : "black" }}>
                 <h1>{props.heading}</h1>
                 <div className="mb-3">
-                    <textarea name="" id="" rows="8" value={text} style={{ backgroundColor: props.Mode === "dark" ? "white" : "grey", color: props.Mode === "dark" ? "black" : "white", height: " 165px", width: "82vw" }} onChange={HandleOnChange}></textarea><br />
-                    <button className="btn btn-primary" onClick={HandleUpClick}>Convert to Uppercase</button>
-                    <button className="btn btn-primary mx-3  my-2" onClick={HandleLoClick}>Convert to lowercase</button>
-                    <button className='btn btn-primary' onClick={RemoveSpaces}>Remove Spaces</button>
-                    <button className="btn btn-primary mx-3 my-2" onClick={Dlttext}>Delete text</button>
+                    <textarea name="" id="" rows="8" value={text} style={{ backgroundColor: props.Mode === "dark" ? "white" : "#cccccc", color: props.Mode === "dark" ? "#000000" : "#000000", height: " 165px", width: "82vw" }} onChange={HandleOnChange}></textarea><br />
+                    <button className="btn btn-primary" disabled={text.length == 0} onClick={HandleUpClick}>Convert to Uppercase</button>
+                    <button className="btn btn-primary mx-3  my-2" disabled={text.length == 0} onClick={HandleLoClick}>Convert to lowercase</button>
+                    <button className='btn btn-primary' disabled={text.length == 0} onClick={RemoveSpaces}>Remove Spaces</button>
+                    <button className="btn btn-primary mx-3 my-2" disabled={text.length == 0} onClick={Dlttext}>Delete text</button>
                     <div className="container my-3">
                         <p>{text.split(" ").filter(word => word.length > 0).length} words</p>
                         <p> {text.replace(/\s+/g, "").length} character in textArea</p>
