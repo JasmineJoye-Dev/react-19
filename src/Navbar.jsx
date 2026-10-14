@@ -33,9 +33,9 @@ export default function Navbar(props) {
                         </li>
                     </ul>
                     <div className="d-flex">
-                        <div className="bg-primary rounded colorBox mx-3" onClick={()=>{props.ToggleMode('primary')}} style={{height:"20px",width:"20px"}}></div>
-                         <div className="bg-danger rounded colorBox mx-3" onClick={()=>{props.ToggleMode('danger')}} style={{height:"20px",width:"20px"}}></div>
-                          <div className="bg-secondary rounded colorBox mx-3" onClick={()=>{props.ToggleMode('secondary')}} style={{height:"20px",width:"20px"}}></div>
+                        <div className="bg-primary rounded colorBox mx-3" onClick={()=>{props.colorBtn('primary')}} style={{height:"20px",width:"20px"}}></div>
+                         <div className="bg-danger rounded colorBox mx-3" onClick={()=>{props.colorBtn('danger')}} style={{height:"20px",width:"20px"}}></div>
+                          <div className="bg-secondary rounded colorBox mx-3" onClick={()=>{props.colorBtn('secondary')}} style={{height:"20px",width:"20px"}}></div>
                     </div>
                     <div className={`form-check form-switch text-${props.Mode === "light" ? "dark" : "light"}`}>
                         <input className="form-check-input" onClick={props.ToggleMode} type="checkbox" value="" id="checkNativeSwitch" switch />

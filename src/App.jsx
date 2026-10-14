@@ -13,9 +13,12 @@ function App() {
    document.body.classList.remove("bg-danger")
   
   }
-  const ToggleMode = (clr) => {
-     removeColor()
-    document.body.classList.add('bg-'+clr)
+  const colorBtn = (clr) => {
+    removeColor()
+     document.body.classList.add('bg-'+clr)
+  }
+  const ToggleMode = () => {
+    removeColor();
     if (Mode === "light") {
       setMode("dark");
       document.body.style.backgroundColor = "#1b3348";
@@ -46,7 +49,7 @@ function App() {
 
   return (
     <>
-      <Navbar title="Jasmine" Mode={Mode} ToggleMode={ToggleMode} About="About" />
+      <Navbar title="Jasmine" Mode={Mode} ToggleMode={ToggleMode} About="About" colorBtn={colorBtn} />
       <Alert AlertMsg={AlertMsg} />
 
       <Routes>
