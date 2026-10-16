@@ -11,13 +11,16 @@ export default function TextForm(props) {
     const HandleOnChange = (e) => {
         setText(e.target.value)
     }
+    const copyText=()=>{
+        navigator.clipboard.writeText(text)
+             props.ShowAlert("copied text", "success")
+    }
     const RemoveSpaces = () => {
         setText(text.replace(/\s+/g, " "));
     }
     const Dlttext = () => {
         setText("");
     }
-
     return (
         <div>
             <div className="container" style={{ color: props.Mode === "dark" ? "white" : "black" }}>
@@ -28,8 +31,9 @@ export default function TextForm(props) {
                     <button className="btn btn-primary mx-3  my-2" disabled={text.length == 0} onClick={HandleLoClick}>Convert to lowercase</button>
                     <button className='btn btn-primary' disabled={text.length == 0} onClick={RemoveSpaces}>Remove Spaces</button>
                     <button className="btn btn-primary mx-3 my-2" disabled={text.length == 0} onClick={Dlttext}>Delete text</button>
+                     <button className="btn btn-primary mx-3 my-2" disabled={text.length == 0} onClick={copyText}>copy text</button>
                     <div className="container my-3">
-                        <p>{text.split(" ").filter(word => word.length > 0).length} words</p>
+                        <p>{text.split(/\s+/).filter(word => word.length > 0).length} words</p>
                         <p> {text.replace(/\s+/g, "").length} character in textArea</p>
                         <p>{0.008 * text.replace(/\s+/g, "").length} Minutes</p>
                     </div>
