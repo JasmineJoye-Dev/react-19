@@ -49,6 +49,13 @@ export default class News extends Component {
             article:this.article
         }
     }
+    async componentDidMount(){
+        let url="https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=97882e7267ae42c1b6fee87d939ce9cf";
+        let data= await fetch(url);
+        let response = await data.json()
+        console.log(response)
+        this.setState({article:response.articles})
+    }
   render() {
     return (
        <div className="container my-3">
@@ -56,7 +63,7 @@ export default class News extends Component {
             <div className='row'>
                  {this.state.article.map((element )=>{
                    return <div className="col-md-4" key={element.url}>
-                    <NewsItems title={element.title.slice(0,45)} description={element.description.slice(0,100)} imageUrl={element.urlToImage} />
+                    <NewsItems title={element.title?element.title.slice(0,45):""} description={element.description?element.description.slice(0,100):""} imageUrl={element.urlToImage} />
                 </div>
                 })}              
             </div>
