@@ -50,22 +50,40 @@ export default class News extends Component {
         }
     }
     async componentDidMount(){
-        let url="https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=97882e7267ae42c1b6fee87d939ce9cf";
+         let url="https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=97882e7267ae42c1b6fee87d939ce9cf";
         let data= await fetch(url);
         let response = await data.json()
         console.log(response)
         this.setState({article:response.articles})
     }
+    HandlePreBtn=async()=>{
+console.log("previous")
+let url=`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page+1}`
+ let data= await fetch(url);
+        let response = await data.json();
+        console.log(response.articles)
+       
+    }
+    HandleNextBtn=()=>{
+console.log("next")
+    }
   render() {
+   
     return (
        <div className="container my-3">
             <h1>News headlines</h1>
             <div className='row'>
                  {this.state.article.map((element )=>{
-                   return <div className="col-md-4" key={element.url}>
+                   return <div className="col-md-4 my-3" key={element.url}>
                     <NewsItems title={element.title?element.title.slice(0,45):""} description={element.description?element.description.slice(0,100):""} imageUrl={element.urlToImage} newsUrl={element.url} />
                 </div>
                 })}              
+            </div>
+            <div className="container">
+        <button disabled={this.state.page <= 1} onClick={this.HandlePreBtn} type="button" className="btn btn-dark">Previous</button>
+            <button type="button" className="btn btn-dark mx-3"  onClick={this.HandleNextBtn} >Next</button>
+
+
             </div>
         </div>
     )
