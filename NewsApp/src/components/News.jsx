@@ -44,28 +44,38 @@ export default class News extends Component {
     ]
     constructor(){
         super();
-        console.log("hello")
         this.state={
-            article:this.article
+            article:this.article,
+            page:1
         }
     }
     async componentDidMount(){
-         let url="https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=97882e7267ae42c1b6fee87d939ce9cf";
+         let url="https://newsapi.org/v2/everything?q=apple&from=2026-10-22&to=2026-10-22&sortBy=popularity&apiKey=97882e7267ae42c1b6fee87d939ce9cf";
         let data= await fetch(url);
         let response = await data.json()
-        console.log(response)
         this.setState({article:response.articles})
     }
     HandlePreBtn=async()=>{
 console.log("previous")
+let url=`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page-1}`
+ let data= await fetch(url);
+        let response = await data.json();
+       
+        this.setState({
+           page: this.state.page-1,
+        article:response.articles
+     })
+       
+    }
+    HandleNextBtn=async()=>{
+console.log("next")
 let url=`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page+1}`
  let data= await fetch(url);
         let response = await data.json();
-        console.log(response.articles)
-       
-    }
-    HandleNextBtn=()=>{
-console.log("next")
+        this.setState({
+           page: this.state.page+1,
+           article:response.articles
+     })
     }
   render() {
    
@@ -79,11 +89,9 @@ console.log("next")
                 </div>
                 })}              
             </div>
-            <div className="container">
-        <button disabled={this.state.page <= 1} onClick={this.HandlePreBtn} type="button" className="btn btn-dark">Previous</button>
-            <button type="button" className="btn btn-dark mx-3"  onClick={this.HandleNextBtn} >Next</button>
-
-
+            <div className="container d-flex justify-content-between">
+        <button  type="button" className="btn btn-dark" onClick={this.HandlePreBtn}>&#8592;Previous</button>
+            <button type="button" className="btn btn-dark mx-3"  onClick={this.HandleNextBtn}>Next&#8594;</button>
             </div>
         </div>
     )
