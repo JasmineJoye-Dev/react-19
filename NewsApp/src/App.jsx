@@ -7,14 +7,13 @@ import News from './components/News'
 // import './App.css'
 
 function App() {
- 
 
   return (
-<>
-<Navbar/>
-<News/>
-</>
-  
+    <>
+      <Navbar />
+      <News pageSize={5} />
+    </>
+
     // <>
     //     <section id="center">
     //     <div className="hero">
@@ -123,7 +122,7 @@ function App() {
     //   <div className="ticks"></div>
     //   <section id="spacer"></section>
     // </>
-  ) 
-} 
+  )
+}
 
 export default App
