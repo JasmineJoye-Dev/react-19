@@ -220,12 +220,13 @@ export default class News extends Component {
     HandlePreBtn = async () => {
         console.log("previous")
         let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`
-
+    this.setState({loading:true})
         let data = await fetch(url);
         let response = await data.json();
         this.setState({
             page: this.state.page - 1,
-            article: response.articles
+            article: response.articles,
+               loading:false
         })
 
     }
