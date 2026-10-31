@@ -219,7 +219,7 @@ export default class News extends Component {
 
         }
     }
-     async  NewsUpdate(pageNo){
+     async  NewsUpdate(){
            let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         this.setState({ loading: true })
         let data = await fetch(url);
@@ -227,12 +227,12 @@ export default class News extends Component {
         this.setState({ article: response.articles, totalResults: response.totalResults, loading: false })
     }
     async componentDidMount() {
-        let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&pageSize=${this.props.pageSize}`;
-        this.setState({ loading: true })
-        let data = await fetch(url);
-        let response = await data.json()
-        this.setState({ article: response.articles, totalResults: response.totalResults, loading: false })
-
+        // let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&pageSize=${this.props.pageSize}`;
+        // this.setState({ loading: true })
+        // let data = await fetch(url);
+        // let response = await data.json()
+        // this.setState({ article: response.articles, totalResults: response.totalResults, loading: false })
+this.NewsUpdate();
     }
     HandlePreBtn = async () => {
         console.log("previous")

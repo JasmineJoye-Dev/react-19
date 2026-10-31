@@ -38,6 +38,10 @@ function App() {
       msg: message,
       type: type
     })
+
+
+
+    
     setInterval(() => {
       setAlertMsg(null);
     }, 3000)
