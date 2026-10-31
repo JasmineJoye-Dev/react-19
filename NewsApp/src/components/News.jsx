@@ -210,14 +210,19 @@ export default class News extends Component {
         }
     ]
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             article: this.article,
             page: 1,
             loading: false
-
+         
         }
+         document.title=`${this.FirstLetterCapitalize(this.props.category)} - NewsApp`;
+
+    }
+    FirstLetterCapitalize(string){
+return string.charAt(0).toUpperCase()+string.slice(1);
     }
      async  NewsUpdate(){
            let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page}&pageSize=${this.props.pageSize}`;
