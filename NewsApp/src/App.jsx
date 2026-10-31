@@ -15,14 +15,14 @@ function App() {
       {/* <News pageSize={5} country="in" category="sports"/> */}
    
     <Routes>
-      <Route path="/"   element={ <News key="general" pageSize={5}  category="general"/>}/>
-<Route path="/sports"  element={ <News  key="sports" pageSize={5}  category="sports"/>}/>
-<Route path="/business"  element={ <News key="business"  pageSize={5}  category="business"/>}/>
-<Route path="/entertainment" element={ <News   key="entertainment" pageSize={5}  category="entertainment"/>}/>
-<Route path="/general" element={ <News key="general" pageSize={5}  category="general"/>}/>
-<Route path="/health" element={ <News  key="health"  pageSize={5}  category="health"/>}/>
-<Route path="/science"  element={ <News  key="science" pageSize={5}  category="science"/>}/>
-<Route path="/technology" element={ <News   key="technology" pageSize={5}  category="technology"/>}/>
+      <Route path="/"   element={ <News key="general" pageSize={8}  category="general"/>}/>
+<Route path="/sports"  element={ <News  key="sports" pageSize={8}  category="sports"/>}/>
+<Route path="/business"  element={ <News key="business"  pageSize={8}  category="business"/>}/>
+<Route path="/entertainment" element={ <News   key="entertainment" pageSize={8}  category="entertainment"/>}/>
+<Route path="/general" element={ <News key="general" pageSize={8}  category="general"/>}/>
+<Route path="/health" element={ <News  key="health"  pageSize={8}  category="health"/>}/>
+<Route path="/science"  element={ <News  key="science" pageSize={8}  category="science"/>}/>
+<Route path="/technology" element={ <News   key="technology" pageSize={8}  category="technology"/>}/>
     </Routes>
   </>
     // <>
