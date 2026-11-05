@@ -4,7 +4,7 @@ export default class NewsItems extends Component {
 
   render() {
 
-    let { title, description, imageUrl, newsUrl, author, date ,source} = this.props
+    let { title, description, imageUrl, newsUrl, author, date, source } = this.props
 
     return (
       <div className="card" >
@@ -12,16 +12,14 @@ export default class NewsItems extends Component {
         <div className="card-body">
           <h5 className="card-title">{!title ? "Mark Zuckerberg’s deal to stay in California" : title}</h5>
           <p className="card-text">{!description ? "Supporters of the tax say many billionaires threatening to leave the state will not go" : description}</p>
-     <div className='text-muted my-3'>
-       <span className="position-absolute top-0  translate-middle badge rounded-pill bg-danger" style={{left:"89%"}}>
-    {source}
-    {/* <span class="visually-hidden">unread messages</span> */}
-  </span>
-          <small>By {!author ? "Unknown" : author} on {new Date(date).toGMTString()}</small>
-   </div>
+          <div className='text-muted my-3'>
+            <span className="position-absolute top-0  translate-middle badge rounded-pill bg-danger" style={{ left: "89%" }}>
+              {source}
+              {/* <span class="visually-hidden">unread messages</span> */}
+            </span>
+            <small>By {!author ? "Unknown" : author} on {new Date(date).toGMTString()}</small>
+          </div>
           <a href={newsUrl} target='_blank' className="btn btn-sm btn-dark">Read more</a>
-     
-       
         </div>
       </div>
     )

@@ -13,212 +13,211 @@ export default class News extends Component {
         pageSize: PropTypes.number,
         category: PropTypes.string
     }
-    article = [
-        {
-            "source": {
-                "id": null,
-                "name": "Yahoo Entertainment"
-            },
-            "author": "Ines Ferré",
-            "title": "Stock market today: Dow, S&P 500 drop, Nasdaq rises after sharp tech sell-off - Yahoo Finance",
-            "description": "Stocks were headed lower on Friday to cap a volatile week.",
-            "url": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-drop-nasdaq-rises-after-sharp-tech-sell-off-160940864.html",
-            "urlToImage": "https://s.yimg.com/lo/mysterio/api/61dee29cdbb9f9ed6df14935f12acdd5a9ceb053216eb3f6d999b401afe9490b/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2024-10%2F694ca160-8d29-11ef-bcce-ad17821c92a2",
-            "publishedAt": "2026-10-23T16:09:40Z",
-            "content": "US stocks were mixed on Friday as worries over the AI trade lingered, following this week's steep sell-off in Tech (XLK) that triggered a flight to bonds.\r\nThe Dow Jones Industrial Average (^DJI\r\n) f… [+8055 chars]"
-        },
-        {
-            "source": {
-                "id": "associated-press",
-                "name": "Associated Press"
-            },
-            "author": "Jennifer McDermott, Alexa St. John",
-            "title": "US designates helium as a critical material, citing its importance for semiconductors - AP News",
-            "description": "The U.S. government has designated helium as a critical material because it’s indispensable for making semiconductors that are essential to energy generation, and the global supply is at risk of disruption. The designation, announced Friday, means that more f…",
-            "url": "https://apnews.com/article/energy-critical-materials-minerals-helium-43da160adc1bad389fba0b9ffbd14c3c",
-            "urlToImage": "https://dims.apnews.com/dims4/default/23324da/2147483647/strip/true/crop/4614x3076+0+0/resize/1200x800!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F42%2Fc0%2Fa18721adbe823b6b5f606d7680a4%2F311ef67aac334f33891f8880165606d7",
-            "publishedAt": "2026-10-23T15:19:00Z",
-            "content": "The U.S. designated helium as a critical material on Friday because its indispensable for making semiconductors that are essential to energy generation, and the global supply is at risk of disruption… [+6045 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Yahoo Entertainment"
-            },
-            "author": "Jared Blikre",
-            "title": "King Apple is taking Wall Street’s top spot back from Nvidia — for the fifth time - Yahoo Finance",
-            "description": "Apple briefly topped Nvidia in market value Friday, a move it has made before that has rarely stuck.",
-            "url": "https://finance.yahoo.com/markets/article/apple-is-taking-wall-streets-top-spot-back-from-nvidia--for-the-fifth-time-142810503.html",
-            "urlToImage": "https://s.yimg.com/lo/mysterio/api/804eaa9e467fd8c7c576c3d1d1ed2505db0f54e98185ab66ae87b2cca816c99b/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-10%2F9a19aa3a-dfbd-4993-9149-21f6e18a77dd",
-            "publishedAt": "2026-10-23T15:16:32Z",
-            "content": "Apple (AAPL) is taking Wall Street's crown back from Nvidia for the fifth time.\r\nApple briefly topped Nvidia in market value on Friday. It's a move Apple has made before, and it has rarely stuck.\r\nAp… [+1966 chars]"
-        },
-        {
-            "source": {
-                "id": "google-news",
-                "name": "Google News"
-            },
-            "author": "Financial Times",
-            "title": "Gold drops below $4,000 as ‘haven’ asset joins market sell-off - Financial Times",
-            "description": null,
-            "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNREJiUTlBN3JzcUxxMzV0ZkI2Qkc3UjlydG5yRWtzTDZGZzJnMHF3ampSSW1YblM1aEQxck9vMjF5dFBZdUpBWDVNY2Y1cEZXMk5td09NclZ1T0E3eG1KY2JLZG83SE14TUtSWTJmeGRwSzNIYjBkRDJqaXFXSVhvSmhsUy0?oc=5",
-            "urlToImage": null,
-            "publishedAt": "2026-10-23T14:37:46Z",
-            "content": null
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Barron's"
-            },
-            "author": "Nate Wolf",
-            "title": "Western Digital Earnings Fail to Get Stock Back on Track - Barron's",
-            "description": "Western Digital delivers the quarterly results it needed, handily beating expectations for its fiscal first-quarter earnings.",
-            "url": "https://www.barrons.com/articles/western-digital-earnings-stock-price-e1e51d1c",
-            "urlToImage": "https://images.barrons.com/im-84595125/social",
-            "publishedAt": "2026-10-23T14:17:00Z",
-            "content": "Citi sees SpaceX launching national wireless service no earlier than 2029, but its reported interest in 80,000 cell sites raises questions about that timeline."
-        },
-        {
-            "source": {
-                "id": "the-wall-street-journal",
-                "name": "The Wall Street Journal"
-            },
-            "author": "WSJ",
-            "title": "Weil Gotshal Loses More Top Lawyers as Merger Talks Collapse - WSJ",
-            "description": null,
-            "url": "https://www.wsj.com/business/deals/weil-gotshal-bleeds-more-top-lawyers-as-it-holds-merger-talks-4d0388ad",
-            "urlToImage": null,
-            "publishedAt": "2026-10-23T14:01:00Z",
-            "content": null
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Barron's"
-            },
-            "author": "Jack Denton",
-            "title": "Micron Stock Leads Chip Rebound. Dip Buyers Must Buckle Up as AI Chaos Swirls. - Barron's",
-            "description": "Micron stock  rises and is leading a rebound in chip stocks into the end of a volatile week. While buy-the-dip calls continue, AI sentiment remains volatile.",
-            "url": "https://www.barrons.com/articles/micron-stock-price-chip-rebound-dip-buyers-0d707a5c",
-            "urlToImage": "https://images.barrons.com/im-26090407/social",
-            "publishedAt": "2026-10-23T13:58:00Z",
-            "content": "Citi sees SpaceX launching national wireless service no earlier than 2029, but its reported interest in 80,000 cell sites raises questions about that timeline."
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Barron's"
-            },
-            "author": "Callum Keown",
-            "title": "SK Hynix Stock Jumps After Scrapping U.S. IPO of Memory-Chip Unit - Barron's",
-            "description": "SK Hynix stock rose despite the company scrapping plans for a U.S. IPO of its memory-chip unit.",
-            "url": "https://www.barrons.com/articles/sk-hynix-stock-ipo-memory-chip-ee84a397",
-            "urlToImage": "https://images.barrons.com/im-99551370/social",
-            "publishedAt": "2026-10-23T13:49:00Z",
-            "content": "Telecom stocks are tumbling on news that SpaceX is aiming to secure 80,000 cell sites across the US, raising the specter of fierce competition between the industrys big three and Starlink Mobile."
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "CNBC"
-            },
-            "author": "Hugh Son",
-            "title": "American Express is cutting 5% of its workforce to 'prepare for AI' - CNBC",
-            "description": "Amex, which reported third-quarter results earlier Friday, is taking a $336 million restructuring charge in the quarter, CEO Stephen Squeri said Friday.",
-            "url": "https://www.cnbc.com/2026/10/23/american-express-job-cuts.html",
-            "urlToImage": "https://image.cnbcfm.com/api/v1/image/108451661-1792761669966-108451661-1792761599620-gettyimages-1244667204-AMEX_SQUERI.jpg?v=1792761737&w=1920&h=1080",
-            "publishedAt": "2026-10-23T13:25:09Z",
-            "content": "American Express is cutting thousands of employees as the leading credit card company prepares for artificial intelligence to take over more of its internal processes.\r\nAmex is eliminating 5% of its … [+1495 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Yahoo Entertainment"
-            },
-            "author": "Daniel Howley",
-            "title": "Meta stock pares losses in pre-market trading following yesterday's 7% decline - Yahoo Finance",
-            "description": "Meta stock pared losses in premarket action Friday.",
-            "url": "https://finance.yahoo.com/technology/article/meta-stock-drops-more-than-7-despite-strong-q3-results-as-ai-spending-fears-return-193128008.html",
-            "urlToImage": "https://s.yimg.com/lo/mysterio/api/d4a9432c0c2c4efafc54eb8c1a66cef7d3f6d48ea7ea1c3b03ce563b512ee62d/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-10%2F2e119a32-7087-4453-9123-7cc692ea3724",
-            "publishedAt": "2026-10-23T12:54:11Z",
-            "content": "Meta (META) stock pared losses in premarket action Friday, following a dismal Thursday trading session. Shares of the social media giant plunged 7%, despite reporting better-than-anticipated Q3 reven… [+2124 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "CNBC"
-            },
-            "author": "Leslie Josephs",
-            "title": "Fewer people are flying as airfare soars. Here's why airlines aren't worried - CNBC",
-            "description": "Airlines are reporting fewer people flew in the third quarter as airfare surged on fuel costs, but executives say travelers are mostly swallowing higher fares.",
-            "url": "https://www.cnbc.com/2026/10/23/airfare-airline-capacity.html",
-            "urlToImage": "https://image.cnbcfm.com/api/v1/image/108363280-1789501763591-gettyimages-2267575658-_sm36684.jpeg?v=1789501842&w=1920&h=1080",
-            "publishedAt": "2026-10-23T12:10:48Z",
-            "content": "Fewer people are flying this year, but with airfare this high and climbing, airline executives say that's just fine.\r\nThe number of people screened at U.S. checkpoints is on track for its first annua… [+4332 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Fox Business"
-            },
-            "author": "Greg Norman-Diamond",
-            "title": "Jetmaker Bombardier doubles down on US investment in deal touted by Trump - Fox Business",
-            "description": "Jetmaker Bombardier said it is \"expanding its presence\" in the United States as part of a $270 million investment deal praised by President Donald Trump.",
-            "url": "https://www.foxbusiness.com/economy/jetmaker-bombardier-doubles-down-us-investment-deal-touted-trump",
-            "urlToImage": "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2026/10/0/0/bombardier-global-8000-.jpg?ve=1&tl=1",
-            "publishedAt": "2026-10-23T12:01:00Z",
-            "content": "FIRST ON FOX: Canadian jetmaker Bombardier announced Friday it is \"expanding in America\" and \"creating thousands of jobs\" as part of a $270 million investment deal touted by President Donald Trump. \r… [+3460 chars]"
-        },
-        {
-            "source": {
-                "id": "bloomberg",
-                "name": "Bloomberg"
-            },
-            "author": "Katherine Doherty, Finbarr Flynn, Dipika Lalwani",
-            "title": "AI Tech Fears Push Global Credit Spreads to 17-Month High - Bloomberg.com",
-            "description": "Global credit markets are flashing the biggest risk-off signals in more than a year, as a selloff in artificial intelligence stocks and growing geopolitical tensions spurred investors to seek out haven assets.",
-            "url": "https://www.bloomberg.com/news/articles/2026-10-23/ai-tech-fears-push-global-credit-spreads-to-17-month-high",
-            "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/inolNO4bAD8k/v0/1200x800.jpg",
-            "publishedAt": "2026-10-23T11:27:28Z",
-            "content": "Global credit markets are flashing the biggest risk-off signals in more than a year, as a selloff in artificial intelligence stocks and growing geopolitical tensions spurred investors to seek out hav… [+303 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "MarketWatch"
-            },
-            "author": "Joy Wiltermuth",
-            "title": "Treasury yields log biggest drop since the 2023 banking crisis. Here’s what’s going on. - MarketWatch",
-            "description": "The scramble for safety was attributed to a confluence of factors suddenly plaguing the market all at once",
-            "url": "https://www.marketwatch.com/story/treasury-yields-see-extreme-plunge-why-investors-are-ducking-for-cover-60044c66",
-            "urlToImage": "https://images.mktw.net/im-46225712/social",
-            "publishedAt": "2026-10-23T11:01:00Z",
-            "content": "Treasury yields sank on Thursday, in a rare bout of extreme buying as \r\ntech stocks plunged and investors headed for cover in one of the worlds largest and most liquid asset classes.The scramble for … [+177 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "NPR"
-            },
-            "author": "Kevin Roose",
-            "title": "Fired OpenAI researchers give their first interview since their dramatic dismissal : Machine Gods - NPR",
-            "description": "Fired OpenAI safety researchers Mikita Balesni and Tomek Korbak give us their first interview since their dramatic dismissal. They take us inside the company during METR’s investigation into the Hugging Face hack, explain why OpenAI’s rebuttal doesn’t add up,…",
-            "url": "https://www.npr.org/2026/10/23/nx-s1-6012298/fired-openai-researchers-give-their-first-interview-since-their-dramatic-dismissal",
-            "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3377x1900+0+0/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fef%2F12%2F4e6f45c84239b8e65ff49b471ee5%2F2cc2b710-5722-4f79-a61f-7750d96f787b.jpg",
-            "publishedAt": "2026-10-23T11:00:00Z",
-            "content": "Fired OpenAI safety researchers Mikita Balesni and Tomek Korbak give us their first interview since their dramatic dismissal. They take us inside the company during METRs investigation into the Huggi… [+663 chars]"
-        }
-    ]
+    // article = [
+    //     {
+    //         "source": {
+    //             "id": null,
+    //             "name": "Yahoo Entertainment"
+    //         },
+    //         "author": "Ines Ferré",
+    //         "title": "Stock market today: Dow, S&P 500 drop, Nasdaq rises after sharp tech sell-off - Yahoo Finance",
+    //         "description": "Stocks were headed lower on Friday to cap a volatile week.",
+    //         "url": "https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-drop-nasdaq-rises-after-sharp-tech-sell-off-160940864.html",
+    //         "urlToImage": "https://s.yimg.com/lo/mysterio/api/61dee29cdbb9f9ed6df14935f12acdd5a9ceb053216eb3f6d999b401afe9490b/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2024-10%2F694ca160-8d29-11ef-bcce-ad17821c92a2",
+    //         "publishedAt": "2026-10-23T16:09:40Z",
+    //         "content": "US stocks were mixed on Friday as worries over the AI trade lingered, following this week's steep sell-off in Tech (XLK) that triggered a flight to bonds.\r\nThe Dow Jones Industrial Average (^DJI\r\n) f… [+8055 chars]"
+    //     },
+    //     {
+    //         "source": {
+    //             "id": "associated-press",
+    //             "name": "Associated Press"
+    //         },
+    //         "author": "Jennifer McDermott, Alexa St. John",
+    //         "title": "US designates helium as a critical material, citing its importance for semiconductors - AP News",
+    //         "description": "The U.S. government has designated helium as a critical material because it’s indispensable for making semiconductors that are essential to energy generation, and the global supply is at risk of disruption. The designation, announced Friday, means that more f…",
+    //         "url": "https://apnews.com/article/energy-critical-materials-minerals-helium-43da160adc1bad389fba0b9ffbd14c3c",
+    //         "urlToImage": "https://dims.apnews.com/dims4/default/23324da/2147483647/strip/true/crop/4614x3076+0+0/resize/1200x800!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F42%2Fc0%2Fa18721adbe823b6b5f606d7680a4%2F311ef67aac334f33891f8880165606d7",
+    //         "publishedAt": "2026-10-23T15:19:00Z",
+    //         "content": "The U.S. designated helium as a critical material on Friday because its indispensable for making semiconductors that are essential to energy generation, and the global supply is at risk of disruption… [+6045 chars]"
+    //     },
+    //     {
+    //         "source": {
+    //             "id": null,
+    //             "name": "Yahoo Entertainment"
+    //         },
+    //         "author": "Jared Blikre",
+    //         "title": "King Apple is taking Wall Street’s top spot back from Nvidia — for the fifth time - Yahoo Finance",
+    //         "description": "Apple briefly topped Nvidia in market value Friday, a move it has made before that has rarely stuck.",
+    //         "url": "https://finance.yahoo.com/markets/article/apple-is-taking-wall-streets-top-spot-back-from-nvidia--for-the-fifth-time-142810503.html",
+    //         "urlToImage": "https://s.yimg.com/lo/mysterio/api/804eaa9e467fd8c7c576c3d1d1ed2505db0f54e98185ab66ae87b2cca816c99b/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-10%2F9a19aa3a-dfbd-4993-9149-21f6e18a77dd",
+    //         "publishedAt": "2026-10-23T15:16:32Z",
+    //         "content": "Apple (AAPL) is taking Wall Street's crown back from Nvidia for the fifth time.\r\nApple briefly topped Nvidia in market value on Friday. It's a move Apple has made before, and it has rarely stuck.\r\nAp… [+1966 chars]"
+    //     },
+    //     {
+    //         "source": {
+    //             "id": "google-news",
+    //             "name": "Google News"
+    //         },
+    //         "author": "Financial Times",
+    //         "title": "Gold drops below $4,000 as ‘haven’ asset joins market sell-off - Financial Times",
+    //         "description": null,
+    //         "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNREJiUTlBN3JzcUxxMzV0ZkI2Qkc3UjlydG5yRWtzTDZGZzJnMHF3ampSSW1YblM1aEQxck9vMjF5dFBZdUpBWDVNY2Y1cEZXMk5td09NclZ1T0E3eG1KY2JLZG83SE14TUtSWTJmeGRwSzNIYjBkRDJqaXFXSVhvSmhsUy0?oc=5",
+    //         "urlToImage": null,
+    //         "publishedAt": "2026-10-23T14:37:46Z",
+    //         "content": null
+    //     },
+    //     {
+    //         "source": {
+    //             "id": null,
+    //             "name": "Barron's"
+    //         },
+    //         "author": "Nate Wolf",
+    //         "title": "Western Digital Earnings Fail to Get Stock Back on Track - Barron's",
+    //         "description": "Western Digital delivers the quarterly results it needed, handily beating expectations for its fiscal first-quarter earnings.",
+    //         "url": "https://www.barrons.com/articles/western-digital-earnings-stock-price-e1e51d1c",
+    //         "urlToImage": "https://images.barrons.com/im-84595125/social",
+    //         "publishedAt": "2026-10-23T14:17:00Z",
+    //         "content": "Citi sees SpaceX launching national wireless service no earlier than 2029, but its reported interest in 80,000 cell sites raises questions about that timeline."
+    //     },
+    //     {
+    //         "source": {
+    //             "id": "the-wall-street-journal",
+    //             "name": "The Wall Street Journal"
+    //         },
+    //         "author": "WSJ",
+    //         "title": "Weil Gotshal Loses More Top Lawyers as Merger Talks Collapse - WSJ",
+    //         "description": null,
+    //         "url": "https://www.wsj.com/business/deals/weil-gotshal-bleeds-more-top-lawyers-as-it-holds-merger-talks-4d0388ad",
+    //         "urlToImage": null,
+    //         "publishedAt": "2026-10-23T14:01:00Z",
+    //         "content": null
+    //     },
+    //     {
+    //         "source": {
+    //             "id": null,
+    //             "name": "Barron's"
+    //         },
+    //         "author": "Jack Denton",
+    //         "title": "Micron Stock Leads Chip Rebound. Dip Buyers Must Buckle Up as AI Chaos Swirls. - Barron's",
+    //         "description": "Micron stock  rises and is leading a rebound in chip stocks into the end of a volatile week. While buy-the-dip calls continue, AI sentiment remains volatile.",
+    //         "url": "https://www.barrons.com/articles/micron-stock-price-chip-rebound-dip-buyers-0d707a5c",
+    //         "urlToImage": "https://images.barrons.com/im-26090407/social",
+    //         "publishedAt": "2026-10-23T13:58:00Z",
+    //         "content": "Citi sees SpaceX launching national wireless service no earlier than 2029, but its reported interest in 80,000 cell sites raises questions about that timeline."
+    //     },
+    //     {
+    //         "source": {
+    //             "id": null,
+    //             "name": "Barron's"
+    //         },
+    //         "author": "Callum Keown",
+    //         "title": "SK Hynix Stock Jumps After Scrapping U.S. IPO of Memory-Chip Unit - Barron's",
+    //         "description": "SK Hynix stock rose despite the company scrapping plans for a U.S. IPO of its memory-chip unit.",
+    //         "url": "https://www.barrons.com/articles/sk-hynix-stock-ipo-memory-chip-ee84a397",
+    //         "urlToImage": "https://images.barrons.com/im-99551370/social",
+    //         "publishedAt": "2026-10-23T13:49:00Z",
+    //         "content": "Telecom stocks are tumbling on news that SpaceX is aiming to secure 80,000 cell sites across the US, raising the specter of fierce competition between the industrys big three and Starlink Mobile."
+    //     },
+    //     {
+    //         "source": {
+    //             "id": null,
+    //             "name": "CNBC"
+    //         },
+    //         "author": "Hugh Son",
+    //         "title": "American Express is cutting 5% of its workforce to 'prepare for AI' - CNBC",
+    //         "description": "Amex, which reported third-quarter results earlier Friday, is taking a $336 million restructuring charge in the quarter, CEO Stephen Squeri said Friday.",
+    //         "url": "https://www.cnbc.com/2026/10/23/american-express-job-cuts.html",
+    //         "urlToImage": "https://image.cnbcfm.com/api/v1/image/108451661-1792761669966-108451661-1792761599620-gettyimages-1244667204-AMEX_SQUERI.jpg?v=1792761737&w=1920&h=1080",
+    //         "publishedAt": "2026-10-23T13:25:09Z",
+    //         "content": "American Express is cutting thousands of employees as the leading credit card company prepares for artificial intelligence to take over more of its internal processes.\r\nAmex is eliminating 5% of its … [+1495 chars]"
+    //     },
+    //     {
+    //         "source": {
+    //             "id": null,
+    //             "name": "Yahoo Entertainment"
+    //         },
+    //         "author": "Daniel Howley",
+    //         "title": "Meta stock pares losses in pre-market trading following yesterday's 7% decline - Yahoo Finance",
+    //         "description": "Meta stock pared losses in premarket action Friday.",
+    //         "url": "https://finance.yahoo.com/technology/article/meta-stock-drops-more-than-7-despite-strong-q3-results-as-ai-spending-fears-return-193128008.html",
+    //         "urlToImage": "https://s.yimg.com/lo/mysterio/api/d4a9432c0c2c4efafc54eb8c1a66cef7d3f6d48ea7ea1c3b03ce563b512ee62d/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-10%2F2e119a32-7087-4453-9123-7cc692ea3724",
+    //         "publishedAt": "2026-10-23T12:54:11Z",
+    //         "content": "Meta (META) stock pared losses in premarket action Friday, following a dismal Thursday trading session. Shares of the social media giant plunged 7%, despite reporting better-than-anticipated Q3 reven… [+2124 chars]"
+    //     },
+    //     {
+    //         "source": {
+    //             "id": null,
+    //             "name": "CNBC"
+    //         },
+    //         "author": "Leslie Josephs",
+    //         "title": "Fewer people are flying as airfare soars. Here's why airlines aren't worried - CNBC",
+    //         "description": "Airlines are reporting fewer people flew in the third quarter as airfare surged on fuel costs, but executives say travelers are mostly swallowing higher fares.",
+    //         "url": "https://www.cnbc.com/2026/10/23/airfare-airline-capacity.html",
+    //         "urlToImage": "https://image.cnbcfm.com/api/v1/image/108363280-1789501763591-gettyimages-2267575658-_sm36684.jpeg?v=1789501842&w=1920&h=1080",
+    //         "publishedAt": "2026-10-23T12:10:48Z",
+    //         "content": "Fewer people are flying this year, but with airfare this high and climbing, airline executives say that's just fine.\r\nThe number of people screened at U.S. checkpoints is on track for its first annua… [+4332 chars]"
+    //     },
+    //     {
+    //         "source": {
+    //             "id": null,
+    //             "name": "Fox Business"
+    //         },
+    //         "author": "Greg Norman-Diamond",
+    //         "title": "Jetmaker Bombardier doubles down on US investment in deal touted by Trump - Fox Business",
+    //         "description": "Jetmaker Bombardier said it is \"expanding its presence\" in the United States as part of a $270 million investment deal praised by President Donald Trump.",
+    //         "url": "https://www.foxbusiness.com/economy/jetmaker-bombardier-doubles-down-us-investment-deal-touted-trump",
+    //         "urlToImage": "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2026/10/0/0/bombardier-global-8000-.jpg?ve=1&tl=1",
+    //         "publishedAt": "2026-10-23T12:01:00Z",
+    //         "content": "FIRST ON FOX: Canadian jetmaker Bombardier announced Friday it is \"expanding in America\" and \"creating thousands of jobs\" as part of a $270 million investment deal touted by President Donald Trump. \r… [+3460 chars]"
+    //     },
+    //     {
+    //         "source": {
+    //             "id": "bloomberg",
+    //             "name": "Bloomberg"
+    //         },
+    //         "author": "Katherine Doherty, Finbarr Flynn, Dipika Lalwani",
+    //         "title": "AI Tech Fears Push Global Credit Spreads to 17-Month High - Bloomberg.com",
+    //         "description": "Global credit markets are flashing the biggest risk-off signals in more than a year, as a selloff in artificial intelligence stocks and growing geopolitical tensions spurred investors to seek out haven assets.",
+    //         "url": "https://www.bloomberg.com/news/articles/2026-10-23/ai-tech-fears-push-global-credit-spreads-to-17-month-high",
+    //         "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/inolNO4bAD8k/v0/1200x800.jpg",
+    //         "publishedAt": "2026-10-23T11:27:28Z",
+    //         "content": "Global credit markets are flashing the biggest risk-off signals in more than a year, as a selloff in artificial intelligence stocks and growing geopolitical tensions spurred investors to seek out hav… [+303 chars]"
+    //     },
+    //     {
+    //         "source": {
+    //             "id": null,
+    //             "name": "MarketWatch"
+    //         },
+    //         "author": "Joy Wiltermuth",
+    //         "title": "Treasury yields log biggest drop since the 2023 banking crisis. Here’s what’s going on. - MarketWatch",
+    //         "description": "The scramble for safety was attributed to a confluence of factors suddenly plaguing the market all at once",
+    //         "url": "https://www.marketwatch.com/story/treasury-yields-see-extreme-plunge-why-investors-are-ducking-for-cover-60044c66",
+    //         "urlToImage": "https://images.mktw.net/im-46225712/social",
+    //         "publishedAt": "2026-10-23T11:01:00Z",
+    //         "content": "Treasury yields sank on Thursday, in a rare bout of extreme buying as \r\ntech stocks plunged and investors headed for cover in one of the worlds largest and most liquid asset classes.The scramble for … [+177 chars]"
+    //     },
+    //     {
+    //         "source": {
+    //             "id": null,
+    //             "name": "NPR"
+    //         },
+    //         "author": "Kevin Roose",
+    //         "title": "Fired OpenAI researchers give their first interview since their dramatic dismissal : Machine Gods - NPR",
+    //         "description": "Fired OpenAI safety researchers Mikita Balesni and Tomek Korbak give us their first interview since their dramatic dismissal. They take us inside the company during METR’s investigation into the Hugging Face hack, explain why OpenAI’s rebuttal doesn’t add up,…",
+    //         "url": "https://www.npr.org/2026/10/23/nx-s1-6012298/fired-openai-researchers-give-their-first-interview-since-their-dramatic-dismissal",
+    //         "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3377x1900+0+0/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fef%2F12%2F4e6f45c84239b8e65ff49b471ee5%2F2cc2b710-5722-4f79-a61f-7750d96f787b.jpg",
+    //         "publishedAt": "2026-10-23T11:00:00Z",
+    //         "content": "Fired OpenAI safety researchers Mikita Balesni and Tomek Korbak give us their first interview since their dramatic dismissal. They take us inside the company during METRs investigation into the Huggi… [+663 chars]"
+    //     }
+    // ]
 
     constructor(props) {
         super(props);
         this.state = {
-            article: this.article,
+            article: [],
+            loading: true,
             page: 1,
-            loading: false,
-            totalResults:0
-
+            totalResults: 0
         }
         document.title = `${this.FirstLetterCapitalize(this.props.category)} - NewsApp`;
 
@@ -226,62 +225,74 @@ export default class News extends Component {
     FirstLetterCapitalize(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    async NewsUpdate() {
+    // async NewsUpdate() {
+    //     let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    //     this.setState({ loading: true })
+    //     let data = await fetch(url);
+    //     let response = await data.json()
+    //     // console.log(response.articles)
+    //     // console.log(response.totalResults)
+    //     this.setState({ article: response.articles, totalResults: response.totalResults, loading: false })
+    // }
+    fetchMoreData = async () => {
+
+        this.setState({ page: this.state.page + 1 });
         let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+        let data = await fetch(url);
+        let response = await data.json()
+        this.setState({
+            article: this.state.article.concat(response.articles),
+            totalResults: response.totalResults
+        })
+    }
+
+    async componentDidMount() {
+        let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&pageSize=${this.props.pageSize}`;
         this.setState({ loading: true })
         let data = await fetch(url);
         let response = await data.json()
-        console.log(response.articles)
-        console.log(response.totalResults)
         this.setState({ article: response.articles, totalResults: response.totalResults, loading: false })
       
     }
-    async componentDidMount() {
-        // let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&pageSize=${this.props.pageSize}`;
-        // this.setState({ loading: true })
-        // let data = await fetch(url);
-        // let response = await data.json()
-        // this.setState({ article: response.articles, totalResults: response.totalResults, loading: false })
-        this.NewsUpdate();
-    }
-    HandlePreBtn = async () => {
-        console.log("previous")
-        // let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`
-        // this.setState({ loading: true })
-        // let data = await fetch(url);
-        // let response = await data.json();
-        // this.setState({
-        //     page: this.state.page - 1,
-        //     article: response.articles,
-        //     loading: false
-        // })
-        this.setState({ page: this.state.page - 1 })
-        this.NewsUpdate()
-    }
-    HandleNextBtn = async () => {
-        // if (!this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pageSize)) {
-        //  else {
-        //     let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`
-        //     this.setState({ loading: true })
-        //     let data = await fetch(url);
-        //     let response = await data.json();
-        //     this.setState({
-        //         page: this.state.page + 1,
-        //         article: response.articles,
-        //         loading: false
-        //     })
-        // }
-        this.setState({ page: this.state.page + 1 })
-        this.NewsUpdate()
-        // }
-    }
+    // HandlePreBtn = async () => {
+    //     console.log("previous")
+    //     // let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`
+    //     // this.setState({ loading: true })
+    //     // let data = await fetch(url);
+    //     // let response = await data.json();
+    //     // this.setState({
+    //     //     page: this.state.page - 1,
+    //     //     article: response.articles,
+    //     //     loading: false
+    //     // })
+    //     this.setState({ page: this.state.page - 1 })
+    //     this.NewsUpdate()
+    // }
+    // HandleNextBtn = async () => {
+    //     // if (!this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pageSize)) {
+    //     //  else {
+    //     //     let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`
+    //     //     this.setState({ loading: true })
+    //     //     let data = await fetch(url);
+    //     //     let response = await data.json();
+    //     //     this.setState({
+    //     //         page: this.state.page + 1,
+    //     //         article: response.articles,
+    //     //         loading: false
+    //     //     })
+    //     // }
+    //     this.setState({ page: this.state.page + 1 })
+    //     this.NewsUpdate()
+    //     // }
+    // }
 
     render() {
+
         return (
             <div className="container my-3">
                 <h1 className="text-center" style={{ margin: "30px 0px" }}>NewsApp - Top {this.FirstLetterCapitalize(this.props.category)} Headlines</h1>
-                {/* {this.state.loading && <Spinner />} */}
-                <InfiniteScroll dataLength={this.state.article.length} next={this.fetchMoreData} hasMore={this.state.article.length!==this.state.totalResults} loader={<Spinner/>}>
+                {this.state.loading && <Spinner />}
+                <InfiniteScroll dataLength={this.state.article.length} next={this.fetchMoreData} hasMore={this.state.article.length !== this.state.totalResults} loader={<Spinner />}>
                     <div className='row mx-3'>
                         {this.state.article.map((element) => {
                             return <div className="col-md-4 my-3" key={element.url}>
@@ -290,10 +301,10 @@ export default class News extends Component {
                         })}
                     </div>
                 </InfiniteScroll>
-                <div className="container d-flex justify-content-between">
+                {/* <div className="container d-flex justify-content-between">
                     <button type="button" disabled={this.state.page <= 1} className="btn btn-dark" onClick={this.HandlePreBtn}>&#8592;Previous</button>
                     <button type="button" disabled={this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pageSize)} className="btn btn-dark mx-3" onClick={this.HandleNextBtn}>Next&#8594;</button>
-                </div>
+                </div> */}
             </div>
         )
     }
