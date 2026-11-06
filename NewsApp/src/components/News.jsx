@@ -235,7 +235,6 @@ export default class News extends Component {
     //     this.setState({ article: response.articles, totalResults: response.totalResults, loading: false })
     // }
     fetchMoreData = async () => {
-
         this.setState({ page: this.state.page + 1 });
         let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&page=${this.state.page}&pageSize=${this.props.pageSize}`;
         let data = await fetch(url);
@@ -247,12 +246,16 @@ export default class News extends Component {
     }
 
     async componentDidMount() {
+        this.props.SetProgress(0)
         let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=97882e7267ae42c1b6fee87d939ce9cf&pageSize=${this.props.pageSize}`;
         this.setState({ loading: true })
+         this.props.SetProgress(10)
         let data = await fetch(url);
+            this.props.SetProgress(20)
         let response = await data.json()
+            this.props.SetProgress(40)
         this.setState({ article: response.articles, totalResults: response.totalResults, loading: false })
-      
+      this.props.SetProgress(100)
     }
     // HandlePreBtn = async () => {
     //     console.log("previous")
