@@ -11,6 +11,8 @@ import LoadingBar from "react-top-loading-bar";
 
 export default class App extends Component {
 pageSize=5;
+ApiKey = import.meta.env.VITE_NEWS_API;
+
 state={
       progress:0,
     }
@@ -18,7 +20,8 @@ state={
   this.setState({progress:progress})
  }
   render() {
-  
+
+   console.log(import.meta.env)
     return (
         <>
         <LoadingBar
@@ -30,7 +33,7 @@ state={
       {/* <News SetProgress=({this.state.progress})) pageSize={5} country="in" category="sports"/> */}
 
       <Routes>
-        <Route path="/"   element={<News SetProgress={this.SetProgress} key="general"   pageSize={this.pageSize}category="General"/>}/>
+        <Route path="/"   element={<News SetProgress={this.SetProgress} ApiKey={this.ApiKey} key="general"   pageSize={this.pageSize}category="General"/>}/>
         <Route path="/sports" element={<News SetProgress={this.SetProgress} key="sports"  pageSize={this.pageSize} category="sports" />} />
         <Route path="/business" element={<News SetProgress={this.SetProgress} key="business"  pageSize={this.pageSize} category="business" />} />
         <Route path="/entertainment" element={<News SetProgress={this.SetProgress} key="entertainment"  pageSize={this.pageSize} category="entertainment" />} />
