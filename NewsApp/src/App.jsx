@@ -16,12 +16,13 @@ ApiKey = import.meta.env.VITE_NEWS_API;
 state={
       progress:0,
     }
+    
  SetProgress=(progress)=>{
   this.setState({progress:progress})
  }
   render() {
 
-   console.log(import.meta.env)
+  
     return (
         <>
         <LoadingBar
@@ -34,13 +35,13 @@ state={
 
       <Routes>
         <Route path="/"   element={<News SetProgress={this.SetProgress} ApiKey={this.ApiKey} key="general"   pageSize={this.pageSize}category="General"/>}/>
-        <Route path="/sports" element={<News SetProgress={this.SetProgress} key="sports"  pageSize={this.pageSize} category="sports" />} />
-        <Route path="/business" element={<News SetProgress={this.SetProgress} key="business"  pageSize={this.pageSize} category="business" />} />
-        <Route path="/entertainment" element={<News SetProgress={this.SetProgress} key="entertainment"  pageSize={this.pageSize} category="entertainment" />} />
-        <Route path="/general" element={<News SetProgress={this.SetProgress} key="general"  pageSize={this.pageSize} category="general" />} />
-        <Route path="/health" element={<News SetProgress={this.SetProgress} key="health"  pageSize={this.pageSize} category="health" />} />
-        <Route path="/science" element={<News SetProgress={this.SetProgress} key="science"  pageSize={this.pageSize} category="science" />} />
-        <Route path="/technology" element={<News SetProgress={this.SetProgress} key="technology"  pageSize={this.pageSize} category="technology" />} />
+        <Route path="/sports" element={<News SetProgress={this.SetProgress} ApiKey={this.ApiKey} pageSize={this.pageSize} category="sports" />} />
+        <Route path="/business" element={<News SetProgress={this.SetProgress} ApiKey={this.ApiKey} key="business"  pageSize={this.pageSize} category="business" />} />
+        <Route path="/entertainment" element={<News SetProgress={this.SetProgress} ApiKey={this.ApiKey} key="entertainment"  pageSize={this.pageSize} category="entertainment" />} />
+        <Route path="/general" element={<News SetProgress={this.SetProgress} ApiKey={this.ApiKey} key="general"  pageSize={this.pageSize} category="general" />} />
+        <Route path="/health" element={<News SetProgress={this.SetProgress} ApiKey={this.ApiKey} key="health"  pageSize={this.pageSize} category="health" />} />
+        <Route path="/science" element={<News SetProgress={this.SetProgress} ApiKey={this.ApiKey} key="science"  pageSize={this.pageSize} category="science" />} />
+        <Route path="/technology" element={<News SetProgress={this.SetProgress} ApiKey={this.ApiKey}  key="technology"  pageSize={this.pageSize} category="technology" />} />
       </Routes>
     </>
     // <>
@@ -74,7 +75,7 @@ state={
 
     //   <div className="ticks"></div>
 
-    //   <section id="next-steps">
+    //   <section id="next-steps"> key="sports"  pageSize=
     //     <div id="docs">
     //       <svg className="icon" role="presentation" aria-hidden="true">
     //         <use href="/icons.svg#documentation-icon"></use>
