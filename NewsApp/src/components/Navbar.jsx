@@ -1,8 +1,9 @@
-import React from 'react'
+import React , {component} from 'react'
 import {  Link } from "react-router";
 
-export default function Navbar() {
+const Navbar=()=> {
   return (
+     
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="#">Navbar</Link>
@@ -44,3 +45,4 @@ export default function Navbar() {
     </nav>
   )
 }
+export default Navbar;
